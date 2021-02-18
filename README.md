@@ -52,6 +52,7 @@ Como usuário você poderá:
  ### Opcionais
  - O sistema pode ser utilizado por multiplos usuários com logins diferentes
    - Os registros feitos pelo sistema recebem como autor o usuário logado no sistema
+ - Adicionar paginação para páginas de clientes e produtos
  
   
 ## Banco de Dados
