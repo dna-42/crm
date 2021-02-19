@@ -1,4 +1,8 @@
 import styled from 'styled-components'
+import Link from "next/link"
+
+
+import routes from "./urls"
 
 const Title = styled.h1`
   font-size: 50px;
@@ -6,5 +10,9 @@ const Title = styled.h1`
 `
 
 export default function Home() {
-  return <Title>My page</Title>
+  return (
+    <Link href={routes.cliente_detalhes}>
+      <a>Cliente Detalhes</a>
+    </Link>
+    )
 }
