@@ -8,7 +8,7 @@ export default function ClientDetailView(){
     return (
         <BaseConteiner>
             <main>
-                <h1>Ola mundo</h1>
+                <h1>Detalhe Clientes</h1>
             </main>
         </BaseConteiner>
     )

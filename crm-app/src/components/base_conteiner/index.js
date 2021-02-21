@@ -1,10 +1,10 @@
-import styled from 'styled-components'
-
 import Image from 'next/image'
 
-const colors = {
-    primary: "#FFB45C"
-}
+import styled from 'styled-components'
+
+import theme from '../../config/theme'
+import SideBar from '../sidebar'
+
 
 const DivConteiner = styled.div`
     margin: 0px;
@@ -22,51 +22,33 @@ const DivConteiner = styled.div`
 
     header{
         grid-area: topbar;
-        background-color: ${colors.primary};
+        background-color: ${theme.colors.primary};
     }
 
     footer{
         grid-area: botbar;
-        background-color: ${colors.primary};
+        background-color: ${theme.colors.primary};
     }
 
     aside{
-        display: flex;
-        width: 12%;
+        width: 10%;
         left: 0px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        display: flex;
         grid-area: sidebar;
-        a {
-            width: 100px;
-            height: 100px;
-            background-color: #FFB45C;
-            
-            img{
-            width: 80%;
-            height: 80%;
-            margin-top: 10px;
-            /* display: block; */
-            /* margin: auto 0px; */
-            }
-        }
     }
 `
 
-export default function BaseConteiner (props){
+function BaseConteiner (props){
     return (
         <DivConteiner>
             <header></header>
             <aside>
-            <a href="#" ><img src="/img/ico_home1.svg" alt=""/></a>
-            <a href="#" ><img src="/img/ico_order.png" alt=""/></a>
-            <a href="#" ><img src="/img/ico_products_hat.svg" alt=""/></a>
-            <a href="#" ><img src="/img/ico_client.svg" alt=""/></a>
-
+                <SideBar/>
             </aside>
                 {props.children}
             <footer></footer>
         </DivConteiner>
     )
 }
+
+export default BaseConteiner
