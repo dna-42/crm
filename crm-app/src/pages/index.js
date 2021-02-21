@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Link from "next/link"
 
 
-import routes from "./routes"
+import routes from '../routes/index.js'
 
 const Title = styled.h1`
   font-size: 50px;
