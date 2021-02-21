@@ -6,7 +6,7 @@ import theme from '../../config/theme'
 import SideBar from '../sidebar'
 
 
-const DivConteiner = styled.div`
+const BaseConteiner = styled.div`
     margin: 0px;
     padding: 0px;
     --header-size: 10%;
@@ -38,17 +38,17 @@ const DivConteiner = styled.div`
     }
 `
 
-function BaseConteiner (props){
+function BaseLayout (props){
     return (
-        <DivConteiner>
+        <BaseConteiner>
             <header></header>
             <aside>
                 <SideBar/>
             </aside>
                 {props.children}
             <footer></footer>
-        </DivConteiner>
+        </BaseConteiner>
     )
 }
 
-export default BaseConteiner
+export default BaseLayout
