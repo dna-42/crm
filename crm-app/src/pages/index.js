@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import Link from "next/link"
-
-
+import BaseConteiner from "../components/base_conteiner"
 import routes from '../routes/index.js'
 
 const Title = styled.h1`
@@ -11,8 +10,10 @@ const Title = styled.h1`
 
 export default function Home() {
   return (
-    <Link href={routes.cliente_detalhes}>
-      <a>Cliente Detalhes</a>
-    </Link>
+    <BaseConteiner>
+      <Link href={routes.cliente_detalhes}>
+        <a>Cliente Detalhes</a>
+      </Link>
+    </BaseConteiner>
     )
 }
