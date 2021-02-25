@@ -1,15 +1,15 @@
 import styled from 'styled-components'
-import BaseConteiner from "../components/base_conteiner"
+import BaseLayout from "../components/base_conteiner"
 
 
 
 
 export default function ClientDetailView(){
     return (
-        <BaseConteiner>
+        <BaseLayout>
             <main>
-                <h1>Ola mundo</h1>
+                <h1>Detalhe Clientes</h1>
             </main>
-        </BaseConteiner>
+        </BaseLayout>
     )
 }
