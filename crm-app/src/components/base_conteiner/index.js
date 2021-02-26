@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-
 import Image from 'next/image'
+import Body from '../body'
 
 const colors = {
     primary: "#FFB45C"
@@ -31,114 +31,18 @@ const DivConteiner = styled.div`
         background-color: ${colors.primary};
 
     }
-    
-    @media only screen and (min-width: 600px){
-        body{
-            grid-area: body;
-            display: grid;
-            grid-template-columns: 50px 1fr;
-            grid-template-areas:
-                "sidebar content";
-
-            aside{
-            // position: absolute;
-                
-            grid-area: sidebar;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: left;
-                
-                
-                a {
-                    //position: relative;
-                    width: 50px;
-                    height: 30px;
-                    margin: 10px 0 10px 0;
-                    padding: 10px 0 10px 0;
-                    background-color: #FFB45C;            
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    img{
-                        width: 60%;
-                    //height: 80%
-                        
-                    }
-                }
-            }
-            content{
-                grid-area: content;
-                height: 100%;
-                width: 100%;
-                background-color: red;
-                //position: responsive;
-                align-items: center;
-            }      
-        }
-    }
-
-    @media only screen and (max-width: 599px){
-        body{
-            grid-area: body;
-            display: row;
-            grid-template-rows: 5% 1fr;
-            grid-template-areas:
-                "sidebar" 
-                "content";
-
-            aside{
-                grid-area: sidebar;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                align-items: justify;
-                background-color: #FFB45C;
-                margin-top: 5px;
-                                
-                a {                               
-                                    
-                    img{
-                        width: 35px;
-                    }
-                }
-            }
-
-            content{
-                grid-area: content;
-                height: 100%;
-                width: 100%;
-                background-color: red;
-                align-items: center;
-                justify-content: center;
-            }      
-        }        
-    }
-
-
+      
 `
 
 export default function BaseConteiner (props){
     return (
         <DivConteiner>
             <header>
-            <img src="/img/ico_padoquinha.png" alt=""/>
+                <img src="/img/ico_padoquinha.png" alt=""/>
             </header>
             <body>
-                <aside>
-                    <a href="{/index}" ><img src="/img/ico_home1.svg" alt=""/></a>
-                    <a href="#" ><img src="/img/ico_order.svg" alt=""/></a>
-                    <a href="#" ><img src="/img/ico_products_hat.svg" alt=""/></a>
-                    <a href="{/cliente_detalhes}" ><img src="/img/ico_client.svg" alt="" /></a>
-                </aside>
-                <content>
-                    {props.children}
-                </content>
-            </body>
-
-
-                
+               <Body/>
+            </body>              
             <footer></footer>
         </DivConteiner>
     )

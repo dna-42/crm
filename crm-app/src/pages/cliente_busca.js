@@ -8,7 +8,6 @@ const Title = styled.h1`
     left: 483px;
     top: 115px;
     font-size: 50px;
-    text-align: middle;
 `
 
 export default function ClientDetailView(){
