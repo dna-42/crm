@@ -1,40 +1,43 @@
-import Image from 'next/image'
-
 import styled from 'styled-components'
 
-import theme from '../../config/theme'
 import SideBar from '../sidebar'
 
 
 const BaseConteiner = styled.div`
     margin: 0px;
     padding: 0px;
-    --header-size: 10%;
-    --footer-size: 5%;
+    --header-size: 60px;
+    --footer-size: 30px;
     display: grid;
-    grid-template-rows: var(--header-size) 1fr var(--footer-size);
+    font-family:${(props) => props.theme.font.family.regular};
+    grid-template-rows: var(--header-size) auto var(--footer-size);
+    grid-template-columns: auto 1fr;
     grid-template-areas:
         "topbar topbar"
-        "sidebar main"
+        "sidebar mainContent"
         "botbar botbar";
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    
 
     header{
         grid-area: topbar;
-        background-color: ${theme.colors.primary};
-    }
-
-    footer{
-        grid-area: botbar;
-        background-color: ${theme.colors.primary};
+        background-color: ${(props) => props.theme.colors.primary};
     }
 
     aside{
         width: 10%;
         left: 0px;
+        margin-right: 10px;
         display: flex;
         grid-area: sidebar;
+    }
+    main{
+        grid-area: mainContent;
+        /* height: 111vh; */
+    }
+    footer{
+        grid-area: botbar;
+        background-color: ${(props) => props.theme.colors.primary};
     }
 `
 
@@ -45,7 +48,9 @@ function BaseLayout (props){
             <aside>
                 <SideBar/>
             </aside>
+            <main>
                 {props.children}
+            </main>
             <footer></footer>
         </BaseConteiner>
     )

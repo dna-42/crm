@@ -1,0 +1,27 @@
+{
+    "theme":{
+        "colors":{
+            "primary": "#FFB45C",
+            "btns":{
+                "action":"#F49857",
+                "danger":"#FA6B71",
+                "actionLight":"#FFB480",
+                "actionDark":"#F07016"
+            },
+            "link":"#F96B06"
+        },
+        "font":{
+            "family":{
+                "regular":"Tahoma",
+                "cursive":"'Rochester', cursive;"
+            },
+            "size": {
+                "regular": "12px",
+                "medium": "28px",
+                "large": "36px",
+                "xlarge":"48px"
+            },
+            "color":"black"
+        }
+    }
+}
