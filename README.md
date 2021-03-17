@@ -56,3 +56,57 @@ Como usuário você poderá:
  
   
 ## Banco de Dados
+
+**CLIENTE****
+_Nome_
+_Sobrenome_
+_CPF_
+_Rua_
+_Nº_
+_Complemento_
+_CEP_
+_Chave Externa - Pedidos_
+
+**KIT**
+_Nome_
+(_Qtdade do Produto_
+_Chave Externa - Produtos_
+_Valor Unitário do Produto_
+)
+_Preço_
+_Categoria_
+
+**PRODUTOS**
+_Nome_
+_Receita_
+_Rendimento_
+_Categoria_
+_Preço MdO_ (Porcentagem sobre o custo)
+
+**PEDIDOS**
+_One-To-Many - Chave Externa - Kit_
+_Forma de Pgto_
+_Status de Pgto_
+
+**RECEITAS**
+_Nome_
+_Rendimento_
+(_Quantidade_
+_Chave Externa - Ingredientes_)
+_Preço Custo_ (Soma do custo dos ingredientes)
+
+
+**INGREDIENTES**
+_Nome_
+_Unidade de Medida_ (Gramas, Kilos, etc)
+_Preço por medida_
+_Custo Frete_
+
+
+
+**RELAÇÃO DO BANCO DE DADOS**
+_Cliente 1 - n Pedidos_
+_Pedido 1 - n Kits_
+_Kit 1 - n Produtos_
+_Produto 1 - n Receitas_
+_Receita 1 - n  Ingredientes_
