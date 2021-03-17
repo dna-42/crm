@@ -29,9 +29,10 @@ const BtnBox = styled.div`
 `
 
 function Btn(props){
+	const route = props.src
 	return (
 		<BtnBox bgColor={props.bgColor}>
-				<Link href="/">
+				<Link href={props.src}>
 					<a>
 						{props.children}
 					</a>

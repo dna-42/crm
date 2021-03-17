@@ -130,8 +130,8 @@ export default function ClientDetailView(){
 									</div>
 								</ClientDetails.InfoBox>
 					<div className="buttons">
-						<Btn bgColor={theme.colors.btns.danger}>Excluir</Btn>
-						<Btn bgColor={theme.colors.btns.actionDark}>Atualizar</Btn>
+						<Btn bgColor={theme.colors.btns.danger} src="/confirm">Excluir</Btn>
+						<Btn bgColor={theme.colors.btns.actionDark} src="/updated">Atualizar</Btn>
 					</div>
 				</ClientDetails>
 		</BaseLayout>
